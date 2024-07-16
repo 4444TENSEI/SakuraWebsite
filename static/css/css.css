@@ -1,0 +1,25 @@
+/* 设置字体 */
+@font-face {
+  font-family: '字体';
+  /* 字体路径 */
+  src: url('../font/OPlusSans3-Bold.ttf');
+}
+
+head {
+  font-family: '字体';
+}
+
+body {
+  font-family: '字体';
+
+  /* 设置页面鼠标指针样式 */
+  cursor: url("../pointer/pointer_pks.gif"), default;
+}
+
+/* 指针悬浮在连接或者按钮时 */
+h1:hover,h2:hover,h3:hover,span:hover,p:hover{
+  cursor: url("../pointer/text_pks.gif"), default;
+}
+a:hover,button:hover {
+  cursor: url("../pointer/link_pks.gif"), default;
+}

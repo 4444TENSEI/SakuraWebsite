@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="static/css/style.css">
+  <link rel="stylesheet" href="static/css/style1.css">
+  <link rel="stylesheet" href="static/css/normalize.min.css">
+  <!-- 设置默认缩放百分比 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- 全局字体 -->
+  <link rel="stylesheet" href="https://npm.elemecdn.com/lxgw-wenkai-webfont@1.1.0/lxgwwenkai-regular.css" />
+  <!-- 标签页图标 -->
+  <link rel="icon" href="static/img/icon.png">
+  <!-- 微信二维码 -->
+  <link rel="img" href="static/img/WX.png">
+
+  <title>Yokazeの个人导航</title>
+
+
+</head>
+
+<body>
+  <!-- 鼠标跟随特效 -->
+  <div class="MouseGS"></div>
+  <!-- partial:index.partial.html -->
+  <canvas id="sakura"></canvas>
+  <div class="btnbg">
+    <!--button type="button" onclick="toggleAnimation(this)">Stop</button-->
+    <div class="wrapper">
+      <!-- 个人卡片 -->
+      <div class="profile-card">
+        <!-- 卡片内容，导航，个人简介和工作经历 -->
+        <div class="content">
+          <!-- 导航 -->
+          <nav id="nav-menu">
+            <!-- data-rel，在js里获取当前要展示哪个section，是个人简介还是工作经历 -->
+            <a class="active zhengwentouyin3" href="#网站简介" data-rel="about-me-section">网站简介</a>
+            <a class="zhengwentouyin3" href="#作品导航" data-rel="work-exp-section">导航链接</a>
+            <!-- 当前选中菜单的指示条 -->
+            <div class="indicator"></div>
+          </nav>
+          <!-- 关于我部分 -->
+          <section class="about-me-section active-section">
+            <!-- 名字和身份信息 -->
+            <div class="h1color  zhengwentouyin4">
+              <span>Y</span>
+              <span>o</span>
+              <span>k</span>
+              <span>a</span>
+              <span>z</span>
+              <span>e</span>
+              <span>の</span>
+              <span>个</span>
+              <span>人</span>
+              <span>导</span>
+              <span>航</span>
+              <span>></span>
+              <span>></span>
+              <span>></span>
+            </div>
+            <div class="personal-info title">
+              <h3 class="typing-demo-1">
+                <欢迎来到我的第一个线上网站 ^_^ />
+              </h3>
+            </div>
+            <!-- 个人简介的内容 -->
+            <div class="网站简介">
+              <p style="text-indent: 2em;" class="zhengwen zhengwentouyin">
+                “我是来自营口职业技术学院2022级计算机应用技术专业的一名学生，这是我于2024.1.1制作的简单期末作业中转网站，可以在卡片右上角的按钮一键下载本站源码~”
+              </p>
+            </div>
+            <!-- 社交图标 -->
+            <footer>
+              <ul>
+                <li style="margin: 0px 20px 0px 0px;" title="添加我为QQ好友 ^_^">
+                  <a href="javascript:;" onclick="copyQQAndOpenQQ()">
+                    <svg t="1704124815233" class="icon" viewBox="0 0 1024 1024" version="1.1"
+                      xmlns="http://www.w3.org/2000/svg" p-id="9478" width="32" height="32">
+                      <path
+                        d="M511.09761 957.257c-80.159 0-153.737-25.019-201.11-62.386-24.057 6.702-54.831 17.489-74.252 30.864-16.617 11.439-14.546 23.106-11.55 27.816 13.15 20.689 225.583 13.211 286.912 6.767v-3.061z"
+                        fill="#FAAD08" p-id="9479"></path>
+                      <path
+                        d="M496.65061 957.257c80.157 0 153.737-25.019 201.11-62.386 24.057 6.702 54.83 17.489 74.253 30.864 16.616 11.439 14.543 23.106 11.55 27.816-13.15 20.689-225.584 13.211-286.914 6.767v-3.061z"
+                        fill="#FAAD08" p-id="9480"></path>
+                      <path
+                        d="M497.12861 474.524c131.934-0.876 237.669-25.783 273.497-35.34 8.541-2.28 13.11-6.364 13.11-6.364 0.03-1.172 0.542-20.952 0.542-31.155C784.27761 229.833 701.12561 57.173 496.64061 57.162 292.15661 57.173 209.00061 229.832 209.00061 401.665c0 10.203 0.516 29.983 0.547 31.155 0 0 3.717 3.821 10.529 5.67 33.078 8.98 140.803 35.139 276.08 36.034h0.972z"
+                        fill="#000000" p-id="9481"></path>
+                      <path
+                        d="M860.28261 619.782c-8.12-26.086-19.204-56.506-30.427-85.72 0 0-6.456-0.795-9.718 0.148-100.71 29.205-222.773 47.818-315.792 46.695h-0.962C410.88561 582.017 289.65061 563.617 189.27961 534.698 185.44461 533.595 177.87261 534.063 177.87261 534.063 166.64961 563.276 155.56661 593.696 147.44761 619.782 108.72961 744.168 121.27261 795.644 130.82461 796.798c20.496 2.474 79.78-93.637 79.78-93.637 0 97.66 88.324 247.617 290.576 248.996a718.01 718.01 0 0 1 5.367 0C708.80161 950.778 797.12261 800.822 797.12261 703.162c0 0 59.284 96.111 79.783 93.637 9.55-1.154 22.093-52.63-16.623-177.017"
+                        fill="#000000" p-id="9482"></path>
+                      <path
+                        d="M434.38261 316.917c-27.9 1.24-51.745-30.106-53.24-69.956-1.518-39.877 19.858-73.207 47.764-74.454 27.875-1.224 51.703 30.109 53.218 69.974 1.527 39.877-19.853 73.2-47.742 74.436m206.67-69.956c-1.494 39.85-25.34 71.194-53.24 69.956-27.888-1.238-49.269-34.559-47.742-74.435 1.513-39.868 25.341-71.201 53.216-69.974 27.909 1.247 49.285 34.576 47.767 74.453"
+                        fill="#FFFFFF" p-id="9483"></path>
+                      <path
+                        d="M683.94261 368.627c-7.323-17.609-81.062-37.227-172.353-37.227h-0.98c-91.29 0-165.031 19.618-172.352 37.227a6.244 6.244 0 0 0-0.535 2.505c0 1.269 0.393 2.414 1.006 3.386 6.168 9.765 88.054 58.018 171.882 58.018h0.98c83.827 0 165.71-48.25 171.881-58.016a6.352 6.352 0 0 0 1.002-3.395c0-0.897-0.2-1.736-0.531-2.498"
+                        fill="#FAAD08" p-id="9484"></path>
+                      <path
+                        d="M467.63161 256.377c1.26 15.886-7.377 30-19.266 31.542-11.907 1.544-22.569-10.083-23.836-25.978-1.243-15.895 7.381-30.008 19.25-31.538 11.927-1.549 22.607 10.088 23.852 25.974m73.097 7.935c2.533-4.118 19.827-25.77 55.62-17.886 9.401 2.07 13.75 5.116 14.668 6.316 1.355 1.77 1.726 4.29 0.352 7.684-2.722 6.725-8.338 6.542-11.454 5.226-2.01-0.85-26.94-15.889-49.905 6.553-1.579 1.545-4.405 2.074-7.085 0.242-2.678-1.834-3.786-5.553-2.196-8.135"
+                        fill="#000000" p-id="9485"></path>
+                      <path
+                        d="M504.33261 584.495h-0.967c-63.568 0.752-140.646-7.504-215.286-21.92-6.391 36.262-10.25 81.838-6.936 136.196 8.37 137.384 91.62 223.736 220.118 224.996H506.48461c128.498-1.26 211.748-87.612 220.12-224.996 3.314-54.362-0.547-99.938-6.94-136.203-74.654 14.423-151.745 22.684-215.332 21.927"
+                        fill="#FFFFFF" p-id="9486"></path>
+                      <path
+                        d="M323.27461 577.016v137.468s64.957 12.705 130.031 3.91V591.59c-41.225-2.262-85.688-7.304-130.031-14.574"
+                        fill="#EB1C26" p-id="9487"></path>
+                      <path
+                        d="M788.09761 432.536s-121.98 40.387-283.743 41.539h-0.962c-161.497-1.147-283.328-41.401-283.744-41.539l-40.854 106.952c102.186 32.31 228.837 53.135 324.598 51.926l0.96-0.002c95.768 1.216 222.4-19.61 324.6-51.924l-40.855-106.952z"
+                        fill="#EB1C26" p-id="9488"></path>
+                    </svg></i></a>
+                </li>
+                <li style="margin: 0px 20px 0px 0px;" title="点击后可选择微信添加方式 ^_^">
+
+                  <!-- 下方onclick设置点击微信图标后的弹窗 -->
+                  <a href="#" onclick="openPopup()"><svg t="1704124678088" class="icon" viewBox="0 0 1024 1024"
+                      version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="7961" width="32" height="32">
+                      <path
+                        d="M0 0m184.32 0l655.36 0q184.32 0 184.32 184.32l0 655.36q0 184.32-184.32 184.32l-655.36 0q-184.32 0-184.32-184.32l0-655.36q0-184.32 184.32-184.32Z"
+                        fill="#65DB79" p-id="7962"></path>
+                      <path
+                        d="M663.21408 407.02976c-128.75776 0-233.13408 87.296-233.13408 194.97984s104.37632 194.97984 233.13408 194.97984a273.85856 273.85856 0 0 0 88.79104-14.76608l66.74432 35.55328-8.98048-64.12288a183.78752 183.78752 0 0 0 86.5792-151.64416c-0.01024-107.68384-104.38656-194.97984-233.13408-194.97984z"
+                        fill="#FFFFFF" p-id="7963"></path>
+                      <path
+                        d="M404.48 194.56c137.0112 0 250.28608 83.968 276.16256 195.2768-48.82432-4.01408-302.08 23.27552-261.85728 271.36-36.4032 0.1024-86.016-1.49504-121.5488-13.4656l-80.62976 42.97728 10.8544-77.45536C164.7104 571.7504 122.88 505.00608 122.88 430.08c0-130.048 126.07488-235.52 281.6-235.52z"
+                        fill="#FFFFFF" p-id="7964"></path>
+                      <path d="M313.344 352.256m-36.864 0a36.864 36.864 0 1 0 73.728 0 36.864 36.864 0 1 0-73.728 0Z"
+                        fill="#65DB79" p-id="7965"></path>
+                      <path d="M497.664 352.256m-36.864 0a36.864 36.864 0 1 0 73.728 0 36.864 36.864 0 1 0-73.728 0Z"
+                        fill="#65DB79" p-id="7966"></path>
+                      <path d="M585.728 544.768m-32.768 0a32.768 32.768 0 1 0 65.536 0 32.768 32.768 0 1 0-65.536 0Z"
+                        fill="#65DB79" p-id="7967"></path>
+                      <path d="M741.376 544.768m-32.768 0a32.768 32.768 0 1 0 65.536 0 32.768 32.768 0 1 0-65.536 0Z"
+                        fill="#65DB79" p-id="7968"></path>
+                    </svg></i></a>
+                </li>
+
+                <li style="margin: 0px 20px 0px 0px;" title="前往我的Github主页 ^_^">
+                  <a href="https://github.com/4444TENSEI/SakuraWebsite" target="_blank"><svg t="1704125123219"
+                      class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="22682"
+                      width="32" height="32">
+                      <path
+                        d="M512 0C229.12 0 0 229.12 0 512c0 226.56 146.56 417.92 350.08 485.76 25.6 4.48 35.2-10.88 35.2-24.32 0-12.16-0.64-52.48-0.64-95.36-128.64 23.68-161.92-31.36-172.16-60.16-5.76-14.72-30.72-60.16-52.48-72.32-17.92-9.6-43.52-33.28-0.64-33.92 40.32-0.64 69.12 37.12 78.72 52.48 46.08 77.44 119.68 55.68 149.12 42.24 4.48-33.28 17.92-55.68 32.64-68.48-113.92-12.8-232.96-56.96-232.96-252.8 0-55.68 19.84-101.76 52.48-137.6-5.12-12.8-23.04-65.28 5.12-135.68 0 0 42.88-13.44 140.8 52.48 40.96-11.52 84.48-17.28 128-17.28 43.52 0 87.04 5.76 128 17.28 97.92-66.56 140.8-52.48 140.8-52.48 28.16 70.4 10.24 122.88 5.12 135.68 32.64 35.84 52.48 81.28 52.48 137.6 0 196.48-119.68 240-233.6 252.8 18.56 16 34.56 46.72 34.56 94.72 0 68.48-0.64 123.52-0.64 140.8 0 13.44 9.6 29.44 35.2 24.32C877.44 929.92 1024 737.92 1024 512c0-282.88-229.12-512-512-512z"
+                        fill="#24292E" p-id="22683"></path>
+                    </svg></path></svg></i></a>
+                </li>
+
+                <li style="margin: 0px 20px 0px 0px;" title="给我发送邮件 ^_^">
+                  <a href="mailto:y0kaze@163.com" target="_blank"><svg t="1704125039715" class="icon"
+                      viewBox="0 0 1586 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="19228" width="32"
+                      height="32">
+                      <path
+                        d="M160.587 1019.543h1261.327a145.569 145.569 0 0 0 145.549-145.529V146.291A145.528 145.528 0 0 0 1421.914 0.803H160.587A145.569 145.569 0 0 0 15.06 146.312v727.702a145.589 145.589 0 0 0 145.528 145.549z"
+                        fill="#F4B459" p-id="19229"></path>
+                      <path
+                        d="M63.85 981.956L670.94 514.77 65.176 37.205c-30.48 26.705-50.116 65.396-50.116 109.107v727.702c0 43.028 19.074 81.318 48.79 107.962zM1518.37 38.049L888.832 516.116l628.957 466.563c30.278-26.644 49.694-65.255 49.694-108.685V146.332c0-43.21-19.215-81.6-49.092-108.283z"
+                        fill="#E8AB54" p-id="19230"></path>
+                      <path
+                        d="M1548.248 944.971l-530.151-424.197L1554.593 86.88a145.669 145.669 0 0 0-55.738-63.688L813.578 571.37l-703.83-560.99a145.609 145.609 0 0 0-69.39 54.09L607.03 518.988 47.666 964.668a144.946 144.946 0 0 0 75.214 49.293l554.165-438.312 33.812 27.266a142.436 142.436 0 0 0 205.603 0l31.483-25.46 538.423 426.366a145.087 145.087 0 0 0 61.862-58.83z"
+                        fill="#FADAAC" p-id="19231"></path>
+                    </svg></i></a>
+                </li>
+
+              </ul>
+
+            </footer>
+          </section>
+          <!-- 导航地址部分 -->
+          <section class="work-exp-section zhengwentouyin4">
+            <!-- 导航地址容器 -->
+            <div class="导航链接">
+              <div class="h1color">
+                <span>🐈</span>
+                <span>H</span>
+                <span>5</span>
+                <span>初</span>
+                <span>学</span>
+                <span>时</span>
+                <span>期</span>
+                <span>作</span>
+                <span>业</span>
+                <span>></span>
+                <span>></span>
+                <span>></span>
+              </div>
+              <div class="personal-info title">
+                <h3 class="typing-demo-2">
+                  <一些2023年末的HTML+CSS期末作业 />
+                </h3>
+              </div>
+
+              <div style="width: 100%;">
+                <button class="custom-btn btn-16 zhengwentouyin2"
+                  onclick="window.open('/01/', '_blank');"><a>用户注册</a></button>
+                <button class="custom-btn btn-16 zhengwentouyin2"
+                  onclick="window.open('/03/', '_blank');"><a>营职院概况</a></button>
+                <button class="custom-btn btn-16 zhengwentouyin2"
+                  onclick="window.open('/02/', '_blank');"><a>孙梅毕业风采</a></button>
+                <button class="custom-btn btn-16 zhengwentouyin2"
+                  onclick="window.open('/04/', '_blank');"><a>学院风光</a></button>
+                <button class="custom-btn btn-16 zhengwentouyin2"
+                  onclick="window.open('/05/', '_blank');"><a>表格布局</a></button>
+                <button class="custom-btn btn-16 zhengwentouyin2"
+                  onclick="window.open('/06/', '_blank');"><a>贝多芬简介</a></button>
+                <button class="custom-btn btn-16 zhengwentouyin2"
+                  onclick="window.open('/SourceCode/', '_blank');"><a>背景原作预览</a></button>
+              </div>
+            </div>
+
+          </section>
+        </div>
+
+        <!-- 卡片之间的间隙，目前不需要 先隐藏
+        <div class="space"></div> -->
+
+        <!-- 侧边动态图片 -->
+        <aside class="profile-image">
+          <img src="static/img/caticon.gif" alt="喵">
+        </aside>
+        <!-- 下载源码按钮 -->
+        <a style="position: absolute;
+                top: 38px;
+                right: 38px;" title="一键下载源码 ^_^"
+          href="https://github.com/4444TENSEI/SakuraWebsite/archive/refs/heads/main.zip" download><svg t="1704876753138"
+            class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="13333"
+            width="32" height="32">
+            <path
+              d="M966.4 396.8c-30.4-44.8-80-73.6-136-80 1.6-9.6 1.6-19.2 1.6-28.8 0-145.6-116.8-262.4-259.2-262.4-132.8 0-243.2 102.4-257.6 233.6-19.2-3.2-36.8-6.4-57.6-6.4C121.6 252.8 12.8 353.6 12.8 475.2c0 121.6 72 206.4 184 217.6h3.2c3.2 0 4.8 1.6 8 1.6h152c19.2 0 33.6-14.4 33.6-32s-16-32-33.6-32h-148.8c-1.6 0-3.2 0-4.8-1.6-80-8-128-65.6-128-153.6s81.6-158.4 180.8-158.4c27.2 0 51.2 4.8 75.2 14.4 9.6 4.8 22.4 3.2 30.4-3.2 9.6-6.4 14.4-17.6 12.8-27.2V288c0-108.8 88-198.4 195.2-198.4S768 177.6 768 288c0 17.6-1.6 35.2-6.4 51.2-3.2 9.6 0 20.8 6.4 28.8s17.6 12.8 27.2 11.2h11.2c44.8 0 84.8 20.8 107.2 54.4l1.6 1.6c14.4 17.6 30.4 44.8 30.4 83.2 0 73.6-67.2 108.8-129.6 112l-132.8 1.6c-20.8 0-36.8 14.4-36.8 32s16 32 36.8 32l128-1.6h9.6c3.2 0 4.8 0 8-1.6 91.2-8 180.8-70.4 180.8-176 1.6-54.4-22.4-96-43.2-120z"
+              fill="#43484D" p-id="13334"></path>
+            <path
+              d="M512 998.4c-8 0-14.4-3.2-20.8-8l-137.6-115.2c-12.8-11.2-16-32-3.2-44.8s32-16 44.8-3.2l84.8 70.4V476.8c0-17.6 14.4-32 32-32s32 14.4 32 32v491.2c0 12.8-8 24-19.2 28.8-3.2 1.6-8 1.6-12.8 1.6z"
+              fill="#229BFF" p-id="13335"></path>
+            <path
+              d="M512 998.4c-9.6 0-19.2-4.8-24-11.2-11.2-14.4-9.6-33.6 4.8-44.8l137.6-112c14.4-11.2 33.6-9.6 44.8 4.8 11.2 14.4 9.6 33.6-4.8 44.8l-137.6 112c-6.4 4.8-14.4 6.4-20.8 6.4z"
+              fill="#229BFF" p-id="13336"></path>
+          </svg></i></a>
+
+      </div>
+
+      <!-- 微信按钮弹窗的内容 -->
+      <dialog id="popup">
+        <div class="dialog-content">
+          <button class="custom-btn-TC btn-17" onclick="scanQRCode()">扫码添加</button>
+          <button class="custom-btn-TC btn-17" onclick="copyWechatID()">复制微信号并跳转</button>
+          <button class="custom-btn-TC btn-17" onclick="closePopup()">我点错啦</button>
+        </div>
+      </dialog>
+      <!-- 弹窗内容↑ -->
+
+
+
+    </div>
+
+  </div>
+
+
+
+
+<script src="static/js/script.js"></script>
+<script src="static/js/index.js"></script>
+<script>
+    // 微信图标的弹窗功能
+    function openPopup() {
+      document.getElementById("popup").showModal();
+      return false;
+    }
+
+    function closePopup() {
+      document.getElementById("popup").close();
+    }
+
+    function scanQRCode() {
+      window.open("static/img/WX.png", "_blank");
+    }
+
+    function copyWechatID() {
+      var textToCopy = "微信号由于涉及隐私传播问题暂不透露哦，请使用扫码添加吧~";
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(textToCopy).then(function () {
+          alert("微信号由于涉及隐私传播问题暂不透露哦，请使用扫码添加吧(点击确定会跳转到微信)^_^/");
+          window.location.href = "weixin://";
+        }, function () {
+          alert("复制微信号失败，请重试！");
+        });
+      }
+    }
+
+    // QQ功能的实现
+    function copyQQAndOpenQQ() {
+      var qqNumber = "2479757568"; // 这里填写你的QQ号
+      var textToCopy = "QQ号：" + qqNumber;
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(textToCopy).then(function () {
+
+          alert("QQ号已复制到剪贴板，快去添加好友吧~");
+          // 尝试打开QQ应用
+          if (window.open('tencent://message/?uin=qq', '_system')) {
+            // 如果QQ应用已安装，则打开QQ应用
+            alert('QQ应用已成功打开');
+          } else {
+            // 如果QQ应用未安装，则显示一个错误消息
+            alert('无法打开QQ应用，请确认已安装QQ应用');
+          }
+        }, function () {
+          alert("复制QQ号失败，请重试！");
+        });
+      }
+    }
+    
+  // 鼠标跟随JS
+  let img = document.querySelector('.MouseGS');
+  let deg = 0;
+  let imgx = 0;
+  let imgy = 0;
+  let imgl = 0;
+  let imgt = 0;
+  let y = 0;
+  let index = 0;
+
+  window.addEventListener('mousemove', function (xyz) {
+    imgx = xyz.x - img.offsetLeft - img.clientWidth / 2;
+    imgy = xyz.y - img.offsetTop - img.clientHeight / 2;
+    deg = 360 * Math.atan(imgy / imgx) / (2 * Math.PI);
+    index = 0;
+    let x = event.clientX;
+    if (img.offsetLeft < x) {
+      y = -180;
+    } else {
+      y = 0;
+    }
+  });
+
+  setInterval(() => {
+    img.style.transform = "rotateZ(" + deg + "deg) rotateY(" + y + "deg)";
+    index++;
+    if (index < 50) {
+      imgl += imgx / 50;
+      imgt += imgy / 50;
+    }
+    img.style.left = imgl + "px";
+    img.style.top = imgt + "px";
+  }, 10);
+</script>
+
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- sakura shader -->
+<script id="sakura_point_vsh" type="x-shader/x_vertex">
+uniform mat4 uProjection;
+uniform mat4 uModelview;
+uniform vec3 uResolution;
+uniform vec3 uOffset;
+uniform vec3 uDOF;  //x:focus distance, y:focus radius, z:max radius
+uniform vec3 uFade; //x:start distance, y:half distance, z:near fade start
+
+attribute vec3 aPosition;
+attribute vec3 aEuler;
+attribute vec2 aMisc; //x:size, y:fade
+
+varying vec3 pposition;
+varying float psize;
+varying float palpha;
+varying float pdist;
+
+//varying mat3 rotMat;
+varying vec3 normX;
+varying vec3 normY;
+varying vec3 normZ;
+varying vec3 normal;
+
+varying float diffuse;
+varying float specular;
+varying float rstop;
+varying float distancefade;
+
+void main(void) {
+  // Projection is based on vertical angle
+  vec4 pos = uModelview * vec4(aPosition + uOffset, 1.0);
+  gl_Position = uProjection * pos;
+  gl_PointSize = aMisc.x * uProjection[1][1] / -pos.z * uResolution.y * 0.5;
+  
+  pposition = pos.xyz;
+  psize = aMisc.x;
+  pdist = length(pos.xyz);
+  palpha = smoothstep(0.0, 1.0, (pdist - 0.1) / uFade.z);
+  
+  vec3 elrsn = sin(aEuler);
+  vec3 elrcs = cos(aEuler);
+  mat3 rotx = mat3(
+      1.0, 0.0, 0.0,
+      0.0, elrcs.x, elrsn.x,
+      0.0, -elrsn.x, elrcs.x
+  );
+  mat3 roty = mat3(
+      elrcs.y, 0.0, -elrsn.y,
+      0.0, 1.0, 0.0,
+      elrsn.y, 0.0, elrcs.y
+  );
+  mat3 rotz = mat3(
+      elrcs.z, elrsn.z, 0.0, 
+      -elrsn.z, elrcs.z, 0.0,
+      0.0, 0.0, 1.0
+  );
+  mat3 rotmat = rotx * roty * rotz;
+  normal = rotmat[2];
+  
+  mat3 trrotm = mat3(
+      rotmat[0][0], rotmat[1][0], rotmat[2][0],
+      rotmat[0][1], rotmat[1][1], rotmat[2][1],
+      rotmat[0][2], rotmat[1][2], rotmat[2][2]
+  );
+  normX = trrotm[0];
+  normY = trrotm[1];
+  normZ = trrotm[2];
+  
+  const vec3 lit = vec3(0.6917144638660746, 0.6917144638660746, -0.20751433915982237);
+  
+  float tmpdfs = dot(lit, normal);
+  if(tmpdfs < 0.0) {
+      normal = -normal;
+      tmpdfs = dot(lit, normal);
+  }
+  diffuse = 0.4 + tmpdfs;
+  
+  vec3 eyev = normalize(-pos.xyz);
+  if(dot(eyev, normal) > 0.0) {
+      vec3 hv = normalize(eyev + lit);
+      specular = pow(max(dot(hv, normal), 0.0), 20.0);
+  }
+  else {
+      specular = 0.0;
+  }
+  
+  rstop = clamp((abs(pdist - uDOF.x) - uDOF.y) / uDOF.z, 0.0, 1.0);
+  rstop = pow(rstop, 0.5);
+  //-0.69315 = ln(0.5)
+  distancefade = min(1.0, exp((uFade.x - pdist) * 0.69315 / uFade.y));
+}
+</script>
+
+<!-- 樱花花瓣阴影亮度在下面的col *= mix(2.2, 1.0, pow(abs(coord.x), 0.3));调整 -->
+<script id="sakura_point_fsh" type="x-shader/x_fragment">
+#ifdef GL_ES
+//precision mediump float;
+precision highp float;
+#endif
+
+uniform vec3 uDOF;  //x:focus distance, y:focus radius, z:max radius
+uniform vec3 uFade; //x:start distance, y:half distance, z:near fade start
+
+const vec3 fadeCol = vec3(0.08, 0.03, 0.06);
+
+varying vec3 pposition;
+varying float psize;
+varying float palpha;
+varying float pdist;
+
+//varying mat3 rotMat;
+varying vec3 normX;
+varying vec3 normY;
+varying vec3 normZ;
+varying vec3 normal;
+
+varying float diffuse;
+varying float specular;
+varying float rstop;
+varying float distancefade;
+
+float ellipse(vec2 p, vec2 o, vec2 r) {
+  vec2 lp = (p - o) / r;
+  return length(lp) - 1.0;
+}
+
+void main(void) {
+  vec3 p = vec3(gl_PointCoord - vec2(0.5, 0.5), 0.0) * 2.0;
+  vec3 d = vec3(0.0, 0.0, -1.0);
+  float nd = normZ.z; //dot(-normZ, d);
+  if(abs(nd) < 0.0001) discard;
+  
+  float np = dot(normZ, p);
+  vec3 tp = p + d * np / nd;
+  vec2 coord = vec2(dot(normX, tp), dot(normY, tp));
+  
+  //angle = 15 degree
+  const float flwrsn = 0.258819045102521;
+  const float flwrcs = 0.965925826289068;
+  mat2 flwrm = mat2(flwrcs, -flwrsn, flwrsn, flwrcs);
+  vec2 flwrp = vec2(abs(coord.x), coord.y) * flwrm;
+  
+  float r;
+  if(flwrp.x < 0.0) {
+      r = ellipse(flwrp, vec2(0.065, 0.024) * 0.5, vec2(0.36, 0.96) * 0.5);
+  }
+  else {
+      r = ellipse(flwrp, vec2(0.065, 0.024) * 0.5, vec2(0.58, 0.96) * 0.5);
+  }
+  
+  if(r > rstop) discard;
+  
+  vec3 col = mix(vec3(1.0, 0.8, 0.75), vec3(1.0, 0.9, 0.87), r);
+  float grady = mix(0.0, 1.0, pow(coord.y * 0.5 + 0.5, 0.35));
+  col *= vec3(1.0, grady, grady);
+
+  col *= mix(2.2, 1.0, pow(abs(coord.x), 0.3));
+
+  col = col * diffuse + specular;
+  
+  col = mix(fadeCol, col, distancefade);
+  
+  float alpha = (rstop > 0.001)? (0.5 - r / (rstop * 2.0)) : 1.0;
+  alpha = smoothstep(0.0, 1.0, alpha) * palpha;
+  
+  gl_FragColor = vec4(col * 0.5, alpha);
+}
+</script>
+<!-- effects -->
+<script id="fx_common_vsh" type="x-shader/x_vertex">
+uniform vec3 uResolution;
+attribute vec2 aPosition;
+
+varying vec2 texCoord;
+varying vec2 screenCoord;
+
+void main(void) {
+  gl_Position = vec4(aPosition, 0.0, 1.0);
+  texCoord = aPosition.xy * 0.5 + vec2(0.5, 0.5);
+  screenCoord = aPosition.xy * vec2(uResolution.z, 1.0);
+}
+</script>
+
+<!-- 可以在col = mix(vec3处更改樱花界面背景颜色
+原始代码为col = mix(vec3(0.02, 0.0, 0.03), vec3(0.96, 0.98, 1.0) * 1.5, c);-->
+
+
+<script id="bg_fsh" type="x-shader/x_fragment">
+#ifdef GL_ES
+//precision mediump float;
+precision highp float;
+#endif
+
+uniform vec2 uTimes;
+
+varying vec2 texCoord;
+varying vec2 screenCoord;
+
+void main(void) {
+  vec3 col;
+  float c;
+  vec2 tmpv = texCoord * vec2(0.8, 1.0) - vec2(0.95, 1.0);
+  c = exp(-pow(length(tmpv) * 1.8, 2.0));
+  col = mix(vec3(0.6, 0.5, 0.53) * 1.1, vec3(0.45,0.95,1), c);
+
+  gl_FragColor = vec4(col * 0.5, 1.0);
+}
+</script>
+
+
+<script id="fx_brightbuf_fsh" type="x-shader/x_fragment">
+#ifdef GL_ES
+//precision mediump float;
+precision highp float;
+#endif
+uniform sampler2D uSrc;
+uniform vec2 uDelta;
+
+varying vec2 texCoord;
+varying vec2 screenCoord;
+
+void main(void) {
+  vec4 col = texture2D(uSrc, texCoord);
+  gl_FragColor = vec4(col.rgb * 2.0 - vec3(0.5), 1.0);
+}
+</script>
+<script id="fx_dirblur_r4_fsh" type="x-shader/x_fragment">
+#ifdef GL_ES
+//precision mediump float;
+precision highp float;
+#endif
+uniform sampler2D uSrc;
+uniform vec2 uDelta;
+uniform vec4 uBlurDir; //dir(x, y), stride(z, w)
+
+varying vec2 texCoord;
+varying vec2 screenCoord;
+
+void main(void) {
+  vec4 col = texture2D(uSrc, texCoord);
+  col = col + texture2D(uSrc, texCoord + uBlurDir.xy * uDelta);
+  col = col + texture2D(uSrc, texCoord - uBlurDir.xy * uDelta);
+  col = col + texture2D(uSrc, texCoord + (uBlurDir.xy + uBlurDir.zw) * uDelta);
+  col = col + texture2D(uSrc, texCoord - (uBlurDir.xy + uBlurDir.zw) * uDelta);
+  gl_FragColor = col / 5.0;
+}
+</script>
+<!-- effect fragment shader template -->
+<script id="fx_common_fsh" type="x-shader/x_fragment">
+#ifdef GL_ES
+//precision mediump float;
+precision highp float;
+#endif
+uniform sampler2D uSrc;
+uniform vec2 uDelta;
+
+varying vec2 texCoord;
+varying vec2 screenCoord;
+
+void main(void) {
+  gl_FragColor = texture2D(uSrc, texCoord);
+}
+</script>
+<!-- post processing -->
+<script id="pp_final_vsh" type="x-shader/x_vertex">
+uniform vec3 uResolution;
+attribute vec2 aPosition;
+varying vec2 texCoord;
+varying vec2 screenCoord;
+void main(void) {
+  gl_Position = vec4(aPosition, 0.0, 1.0);
+  texCoord = aPosition.xy * 0.5 + vec2(0.5, 0.5);
+  screenCoord = aPosition.xy * vec2(uResolution.z, 1.0);
+}
+</script>
+<script id="pp_final_fsh" type="x-shader/x_fragment">
+#ifdef GL_ES
+//precision mediump float;
+precision highp float;
+#endif
+uniform sampler2D uSrc;
+uniform sampler2D uBloom;
+uniform vec2 uDelta;
+varying vec2 texCoord;
+varying vec2 screenCoord;
+void main(void) {
+  vec4 srccol = texture2D(uSrc, texCoord) * 2.0;
+  vec4 bloomcol = texture2D(uBloom, texCoord);
+  vec4 col;
+  col = srccol + bloomcol * (vec4(1.0) + srccol);
+  col *= smoothstep(1.0, 0.0, pow(length((texCoord - vec2(0.5)) * 2.0), 1.2) * 0.5);
+  col = pow(col, vec4(0.45454545454545)); //(1.0 / 2.2)
+  
+  gl_FragColor = vec4(col.rgb, 1.0);
+  gl_FragColor.a = 1.0;
+}
+</script>
