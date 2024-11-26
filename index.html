@@ -11,9 +11,9 @@
   <!-- 全局字体 -->
   <link rel="stylesheet" href="https://npm.elemecdn.com/lxgw-wenkai-webfont@1.1.0/lxgwwenkai-regular.css" />
   <!-- 标签页图标 -->
-  <link rel="icon" href="static/img/icon.png">
+  <link rel="icon" href="https://testingcf.jsdelivr.net/gh/4444TENSEI/CDN@master/img/avatar/kaze/ico/public.ico">
   <!-- 微信二维码 -->
-  <link rel="img" href="static/img/WX.png">
+  <link rel="img" href="https://testingcf.jsdelivr.net/gh/4444TENSEI/CDN@master/img/contact/qq.webp">
 
   <title>Yokazeの个人导航</title>
 
@@ -269,7 +269,7 @@
     }
 
     function scanQRCode() {
-      window.open("static/img/WX.png", "_blank");
+      window.open("https://testingcf.jsdelivr.net/gh/4444TENSEI/CDN@master/img/contact/qq.webp", "_blank");
     }
 
     function copyWechatID() {
@@ -284,9 +284,9 @@
       }
     }
 
-    // QQ功能的实现
+    // QQ功能的实现F
     function copyQQAndOpenQQ() {
-      var qqNumber = "2479757568"; // 这里填写你的QQ号
+      var qqNumber = "2479757568";
       var textToCopy = "QQ号：" + qqNumber;
       if (navigator.clipboard) {
         navigator.clipboard.writeText(textToCopy).then(function () {
@@ -294,11 +294,9 @@
           alert("QQ号已复制到剪贴板，快去添加好友吧~");
           // 尝试打开QQ应用
           if (window.open('tencent://message/?uin=qq', '_system')) {
-            // 如果QQ应用已安装，则打开QQ应用
-            alert('QQ应用已成功打开');
           } else {
             // 如果QQ应用未安装，则显示一个错误消息
-            alert('无法打开QQ应用，请确认已安装QQ应用');
+            alert('无法打开QQ，请确认已安装QQ');
           }
         }, function () {
           alert("复制QQ号失败，请重试！");
